@@ -1,0 +1,40 @@
+CREATE TABLE atendidos (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nome TEXT,
+telefone TEXT,
+inicio DATE,
+ciclo INTEGER,
+presencas INTEGER DEFAULT 0,
+status TEXT
+);
+
+CREATE TABLE presencas (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+atendido_id INTEGER,
+data DATE
+);
+
+CREATE TABLE trabalhadores (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nome TEXT,
+funcao TEXT
+);
+
+CREATE TABLE turmas_esde (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nome TEXT,
+dia TEXT,
+horario TEXT
+);
+
+CREATE TABLE alunos_esde (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nome TEXT,
+turma_id INTEGER
+);
+
+CREATE TABLE evangelizandos (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nome TEXT,
+turma TEXT
+);
