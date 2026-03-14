@@ -1,6 +1,0 @@
-CREATE TABLE atendidos (
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-nome TEXT,
-telefone TEXT,
-presencas INTEGER
-);
