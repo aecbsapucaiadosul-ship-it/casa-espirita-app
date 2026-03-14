@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Casa Espírita</title>
+</head>
+
+<body>
+
+<h1>Atendimento Espiritual</h1>
+
+<form action="/novo" method="post">
+
+Nome<br>
+<input name="nome">
+
+Telefone<br>
+<input name="telefone">
+
+<br><br>
+
+<button>Cadastrar</button>
+
+</form>
+
+<hr>
+
+<h2>Pessoas em tratamento</h2>
+
+{% for p in pessoas %}
+
+<div>
+
+<b>{{p.nome}}</b>
+
+<br>
+
+Telefone: {{p.telefone}}
+
+<br>
+
+Presenças: {{p.presencas}}
+
+<br>
+
+<a href="/presenca/{{p.id}}">
+Registrar presença
+</a>
+
+</div>
+
+<hr>
+
+{% endfor %}
+
+</body>
+</html>
