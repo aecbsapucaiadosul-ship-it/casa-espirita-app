@@ -1,1 +1,25 @@
+{% extends "base.html" %}
 
+{% block content %}
+
+<h2>Recepção</h2>
+
+<p>Escaneie o QR do atendido</p>
+
+<div id="scanner"></div>
+
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+<script>
+
+function onScanSuccess(decodedText){
+
+window.location="/presenca/"+decodedText
+
+}
+
+new Html5QrcodeScanner("scanner").render(onScanSuccess)
+
+</script>
+
+{% endblock %}
